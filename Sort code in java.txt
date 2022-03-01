@@ -1,0 +1,33 @@
+
+public class Main{
+
+    public static void main(String[] args){
+    
+  
+
+      int[] Arr = {5, 2, 1, 3, 4};
+      
+      int Min = 0,MinIndex = 0;
+      for (int i = 0; i < Arr.length; i++) {
+        Min = Arr[i];
+        MinIndex = i;
+
+        for(int j = i+1; j < Arr.length; j++){
+            if(Min > Arr[j]){
+              Min = Arr[j];
+              MinIndex = j;
+           }
+          }
+          if(Min < Arr[i]){
+              int temp = Arr[i];
+              Arr[i] = Arr[MinIndex];
+              Arr[MinIndex] = temp;
+          }        
+      }
+      
+          for (int i = 0; i < Arr.length; i++) {
+            System.out.print(Arr[i] + " ");
+          }
+      
+    }
+}
